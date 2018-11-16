@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Student;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public $studentcount= App\Student::all();
     /**
      * Create a new controller instance.
      *
@@ -23,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         return view('index');
     }
 }
