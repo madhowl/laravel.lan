@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public $studentcount= App\Student::all();
+    
     /**
      * Create a new controller instance.
      *
@@ -25,7 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-
+        $studentcount = Student::all()->count();
+        echo $studentcount;
         return view('index');
     }
 }
